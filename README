@@ -1,1 +1,26 @@
-# Happy_Birthday_Mochi
+Happy Birthday Mochi! 
+
+Table of Contents
+
+    Introduction
+    Import Libraries & Packages
+    Meeting in London
+    Mapping London
+    Walking Together Since
+
+1. Introduction
+
+Dear Mochi,
+
+I've often thought about how we met - at the South Asian Literature Festival at Rich Mix in London on October 9, 2011, sitting next to each other at the Sheherazade performance - and marveled at the cosmic odds. How we overlapped living in London for a few short months. How we went to the same event, how we we happened to be sitting next to each other. How I was originally not even planning on attending that 2nd day of the event. I wanted to dig further, to see if there's still anything up online about that event, to bring to life all the places we went to together, and, just for fun, estimate how many steps we've walked together. So that's what I've tried to do. I hope you like it.
+
+First, on the event itself, I wasn't able to find too much remaining information or a program detail on it, but, scraped a few details from a site highlighting it using BeautifulSoup. I also displayed a couple of photos of Rich Mix and where we sat using IPython's Image method.
+
+Next, I wanted to create a map for you of all of our favorite places in London. In order to do that, I created a dataframe of our favorite places (at least the ones I could remember), geocoded them by grabbing their latitude and longitude using Nominatim, and plotted an interactive zoom & pop-up map using Folium.
+
+Finally, I wanted to tell you how many steps we've each taken together. Since I didn't have consistent, reliable fitbit or Apple Watch data, I simulated steps that we've each walked together starting from the day we met. To do this, I first generated a right-skewed normal distribution (skewness of a=12) to account for the higher-end outlier vacation and weekend days (ahem, remember the 30,000 steps we took at Amalfi). The sample size is the number of days since we met. It's not exact, but, knowing our average daily and outlier behavior, it's a close approximation. I corrected for negative steps and pulled from this distribution to simulate a random walk to then get the cumulative sum of steps. We've each walked 19,246,605 steps together!
+
+What was even better than seeing the end results was reliving so many beautiful memories of when we first met.
+
+Excited for the next 20 millions steps,
+Squirrel
